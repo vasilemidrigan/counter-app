@@ -1,13 +1,64 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #146382;
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: #17a392;
+}
+
+button:hover {
+  background-color: #1a5f7a;
+}
+
+button:active {
+  box-shadow: inset 0px 0px 50px -19px #3bd6c9;
+}
+
+/* App */
+.App {
+  position: relative;
+  width: 70%;
+  max-width: 18.75rem;
+  min-width: 15rem;
+  height: 200px;
+  margin: 1.25rem auto;
+  background-color: #14798b;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #146382;
+}
+
+/* Ouput */
+.Output {
+  width: 6.25rem;
+  height: 3.125rem;
+  right: 50%;
+  top: 40px;
+  color: #17a392;
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input */
+.Input {
+  bottom: 1.25rem;
+  right: 50%;
+}
+
+.Input,
+.Output {
+  transform: translate(50%, 0%);
+  position: absolute;
 }

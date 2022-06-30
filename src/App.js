@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Input from "./components/Input";
+import Output from "./components/Output";
+import "./index.css";
 
-function App() {
+export default function App() {
+  const [result, setResult] = useState(0);
+
+  function addition() {
+    setResult((prevResult) => {
+      return prevResult + 1;
+    });
+  }
+
+  function subtraction() {
+    setResult((prevResult) => {
+      return prevResult - 1;
+    });
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Output data={result} />
+      <Input add={addition} subtract={subtraction} />
     </div>
   );
 }
-
-export default App;
