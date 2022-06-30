@@ -1,4 +1,4 @@
-#Counter App
+# Counter App
 
 A simple counter app builded on ReactJS.
 
